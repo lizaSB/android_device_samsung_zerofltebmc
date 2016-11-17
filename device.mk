@@ -14,9 +14,6 @@
 # limitations under the License.
 #
 
-## (2) Also get non-open-source specific aspects if available
-$(call inherit-product-if-exists, vendor/samsung/zerofltexx/zerofltexx-vendor.mk)
-
 LOCAL_PATH := device/samsung/zerofltexx
 
 ## device overlays
@@ -32,3 +29,6 @@ PRODUCT_COPY_FILES += \
 
 # Inherit from zero-common
 $(call inherit-product, device/samsung/zero-common/zero-common.mk)
+
+# Proprietary
+$(call inherit-product, device/samsung/zerofltexx/proprietary.mk)
