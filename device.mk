@@ -23,6 +23,13 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 PRODUCT_PACKAGES += \
     init.carrier.rc
 
+# Set usb type
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    persist.service.adb.enable=1 \
+    ro.adb.secure=0 \
+    ro.secure=0 \
+    ro.allow.mock.location=1
+
 # cpboot daemon
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ril/sbin/cbd:root/sbin/cbd
